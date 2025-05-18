@@ -1,0 +1,34 @@
+cd 
+pwd 
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+clear
+cd
+mkdir repogit
+mkdir vagrantfile
+cd vagrantfile/
+git clone git@github.com:luiscar241/TP1_AySO.git
+cd TP1_AySO/
+grep HOME_URL /etc/os-release
+grep -i home_url /etc/os-release
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt
+git add .
+git config --global user.email "luiscar241@gmail.com"
+git config --global user.name "luiscar241"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuarios.txt
+git commit -m “feat: Añadiendo información de CPU”
+cat <<EOF >> README.md
+Alumno: luis torres
+Div: 318 Turno: Noche
+EOF
+
+git add README.md datos_usuarios.txt
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+history -a
